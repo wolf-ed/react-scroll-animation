@@ -47,3 +47,10 @@ div .show {
 .box h2 {
   font-size: 45px;
 }
+
+@media (max-width: 700px) {
+  div .box,
+  div .show {
+    max-width: 95vw;
+  }
+}
