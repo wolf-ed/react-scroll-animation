@@ -5,6 +5,8 @@ import '../index.css';
 const Box = () => {
     const elementRef = useRef(null);
     const [boxStyle, setBoxStyle] = useState('box');
+    const { innerWidth: width } = window;
+
 
     const handleScroll = () => {
 
@@ -18,7 +20,12 @@ const Box = () => {
         }
     }
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        if (width > 700) {
+            window.addEventListener('scroll', handleScroll)
+        } else {
+            setBoxStyle('box show')
+            setText(document.body.scrollHeight)
+        }
     }, [])
 
 
