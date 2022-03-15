@@ -24,7 +24,6 @@ const Box = () => {
             window.addEventListener('scroll', handleScroll)
         } else {
             setBoxStyle('box show')
-            setText(document.body.scrollHeight)
         }
     }, [])
 
